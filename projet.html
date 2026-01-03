@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Projet</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <a href="entreprise.html" class="nav-back" aria-label="Retour Entreprise">&larr;</a>
+    <button id="theme-toggle" class="theme-toggle-fixed" aria-label="Changer de thème">
+        <span class="icon">☀️</span>
+    </button>
+
+    <main class="container animate-enter">
+
+        <header style="margin-bottom: 40px;">
+            <h1>Déploiement WiFi & Pilotage</h1>
+            <p>Analyse réflexive de mes deux missions principales.</p>
+        </header>
+
+        <section style="margin-bottom: 50px;">
+            <div class="card">
+                <h2>Présentation du projet</h2>
+                <p style="margin-top: 15px;">
+                    Ce projet consiste en la refonte complète de l'infrastructure réseau d'un client multi-sites. 
+                    L'objectif principal était d'assurer une couverture WiFi 6 optimale tout en respectant des contraintes strictes de sécurité (segmentation VLAN). 
+                    En parallèle, j'ai assuré le pilotage opérationnel : coordination des prestataires, gestion du planning et suivi budgétaire.
+                </p>
+            </div>
+        </section>
+
+        <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+                <h2>Mission 1 : Technique (WiFi)</h2>
+                <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+                <div class="accordion-content-inner">
+                    
+                    <div class="card">
+                        <h3>Apprentissages Critiques (BUT R&T)</h3>
+                        <div style="margin-bottom: 15px;">
+                            <span class="tag tag-ac">AC1 - Admin Réseau</span>
+                            <span class="tag tag-ac">AC2 - Technologies Sans Fil</span>
+                        </div>
+                        <p>J'ai appris à ne pas faire confiance aveuglément aux plans théoriques. La réalité du terrain (murs porteurs non indiqués) prime toujours sur la simulation.</p>
+                    </div>
+
+                    <h3 style="margin-top: 30px; margin-bottom: 20px;">Preuves & Livrables</h3>
+                    <div class="grid-3">
+                        <div class="card-proof">
+                            <span class="proof-meta">PDF / Excel</span>
+                            <h4>Plan d'Adressage IP</h4>
+                            <p>Découpage des sous-réseaux et affectation des VLANs.</p>
+                            <p style="font-style: italic; font-size: 0.85rem; color: var(--accent);">
+                                &rarr; Démontre la maîtrise du subnetting.
+                            </p>
+                        </div>
+                        <div class="card-proof">
+                            <span class="proof-meta">Capture Ekahau</span>
+                            <h4>Heatmap WiFi</h4>
+                            <p>Simulation de couverture avant/après travaux.</p>
+                            <p style="font-style: italic; font-size: 0.85rem; color: var(--accent);">
+                                &rarr; Prouve l'efficacité du placement des bornes.
+                            </p>
+                        </div>
+                        <div class="card-proof">
+                            <span class="proof-meta">Extrait Code</span>
+                            <h4>Config Switch</h4>
+                            <p>Configuration des ports trunk et access.</p>
+                            <p style="font-style: italic; font-size: 0.85rem; color: var(--accent);">
+                                &rarr; Démontre la compétence CLI Cisco/Aruba.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 30px; color: var(--accent);">Focus : Une erreur, une leçon</h3>
+                    <p><strong>L'erreur :</strong> Puissance d'émission trop forte (MAX) créant du "Stickiness".</p>
+                    <p><strong>La correction :</strong> Ajustement manuel des niveaux Tx (-6dB) pour forcer le roaming.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+                <h2>Mission 2 : Gestion de Projet</h2>
+                <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+                <div class="accordion-content-inner">
+                    
+                    <div class="card">
+                        <h3>Apprentissages Critiques (BUT R&T)</h3>
+                        <div style="margin-bottom: 15px;">
+                            <span class="tag tag-ac">AC3 - Gestion de Projet</span>
+                            <span class="tag tag-ac">AC4 - Communication</span>
+                        </div>
+                        <p>La technique est binaire, la gestion est humaine. Arbitrage constant entre coût, délai et qualité.</p>
+                    </div>
+
+                    <h3 style="margin-top: 30px; margin-bottom: 20px;">Preuves & Livrables</h3>
+                    <div class="grid-3">
+                        <div class="card-proof">
+                            <span class="proof-meta">Capture MS Project</span>
+                            <h4>Planning Gantt</h4>
+                            <p>Visualisation du chemin critique et des tâches.</p>
+                            <p style="font-style: italic; font-size: 0.85rem; color: var(--accent);">
+                                &rarr; Démontre l'anticipation des délais.
+                            </p>
+                        </div>
+                        <div class="card-proof">
+                            <span class="proof-meta">Tableau Excel</span>
+                            <h4>Matrice RACI</h4>
+                            <p>Définition des rôles (Qui fait quoi, qui décide).</p>
+                            <p style="font-style: italic; font-size: 0.85rem; color: var(--accent);">
+                                &rarr; Prouve la capacité à organiser une équipe.
+                            </p>
+                        </div>
+                        <div class="card-proof">
+                            <span class="proof-meta">Document PDF</span>
+                            <h4>Compte-rendu réunion</h4>
+                            <p>PV de réunion de chantier avec arbitrage client.</p>
+                            <p style="font-style: italic; font-size: 0.85rem; color: var(--accent);">
+                                &rarr; Démontre la communication professionnelle.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 30px;">Tableau des imprévus</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Imprévu</th>
+                                <th>Solution</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Retard livraison Switchs</td>
+                                <td>Pré-câblage en amont pour gagner du temps.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <footer style="margin-top: 80px; text-align: center; color: var(--text-muted);">
+            <p>Merci de votre lecture.</p>
+            <a href="mailto:ton@email.com" class="btn btn-outline" style="font-size: 0.9rem; margin-top: 10px;">Me contacter</a>
+        </footer>
+
+    </main>
+
+    <script src="js/theme.js"></script>
+</body>
+</html>
