@@ -1,11 +1,74 @@
 <!DOCTYPE html>
 <html lang="fr" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Détails du Projet</title>
+    <title>Détails du Projet - Victoria</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* --- DESIGN HARMONISÉ : BARRES DE STATUT --- */
+        .status-container-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin-top: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .status-container-box:hover {
+            transform: translateX(5px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .status-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-dot {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .status-text {
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Couleurs des points et textes */
+        .dot-acquis { background: #2ecc71; box-shadow: 0 0 10px #2ecc71; }
+        .text-acquis { color: #2ecc71; }
+
+        .dot-encours { background: #f1c40f; box-shadow: 0 0 10px #f1c40f; }
+        .text-encours { color: #f1c40f; }
+
+        .dot-non { background: #e74c3c; box-shadow: 0 0 10px #e74c3c; }
+        .text-non { color: #e74c3c; }
+
+        /* Ajustement pour les AC dans les missions (plus compact) */
+        .ac-box {
+            padding: 6px 12px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
+
 <body>
 
     <a href="entreprise.html" class="nav-back" aria-label="Retour Entreprise">&larr;</a>
@@ -17,68 +80,108 @@
 
         <header style="margin-bottom: 40px;">
             <h1>Déploiement WiFi & Pilotage</h1>
-            <p>Analyse réflexive de mes deux missions principales.</p>
+            <p>Analyse réflexive de mon parcours en alternance.</p>
         </header>
 
         <section style="margin-bottom: 50px;">
             <div class="card">
-                <h2>Présentation du projet</h2>
+                <h2>Le Projet : Le Haras</h2>
                 <p style="margin-top: 15px;">
-                    Ce projet consiste en la refonte complète de l'infrastructure réseau d'un client multi-sites. 
-                    L'objectif principal était d'assurer une couverture WiFi 6 optimale tout en respectant des contraintes strictes de sécurité (segmentation VLAN). 
-                    En parallèle, j'ai assuré le pilotage opérationnel : coordination des prestataires, gestion du planning et suivi budgétaire.
+                    Déploiement d'une infrastructure réseau sans fil complète sur un site historique. Ce projet mobilise l'ensemble du référentiel de compétences R&T.
                 </p>
+
+                <h3 style="margin-top: 25px; margin-bottom: 15px; font-size: 1.1rem; color: var(--accent);">Bilan des Compétences R&T</h3>
+                
+                <div class="status-container-box">
+                    <span class="status-label">C1 : Administrer les réseaux et l'Internet</span>
+                    <div class="status-indicator">
+                        <span class="status-dot dot-acquis"></span>
+                        <span class="status-text text-acquis">Acquis</span>
+                    </div>
+                </div>
+
+                <div class="status-container-box">
+                    <span class="status-label">C2 : Connecter les entreprises et les usagers</span>
+                    <div class="status-indicator">
+                        <span class="status-dot dot-acquis"></span>
+                        <span class="status-text text-acquis">Acquis</span>
+                    </div>
+                </div>
+
+                <div class="status-container-box">
+                    <span class="status-label">C3 : Créer des outils et applications informatiques</span>
+                    <div class="status-indicator">
+                        <span class="status-dot dot-encours"></span>
+                        <span class="status-text text-encours">En cours</span>
+                    </div>
+                </div>
+
+                <div class="status-container-box">
+                    <span class="status-label">C4 : Piloter des projets réseaux et télécoms</span>
+                    <div class="status-indicator">
+                        <span class="status-dot dot-acquis"></span>
+                        <span class="status-text text-acquis">Acquis</span>
+                    </div>
+                </div>
+
+                <div class="status-container-box">
+                    <span class="status-label">C5 : Sécuriser les infrastructures et les données</span>
+                    <div class="status-indicator">
+                        <span class="status-dot dot-encours"></span>
+                        <span class="status-text text-encours">En cours</span>
+                    </div>
+                </div>
             </div>
         </section>
 
         <div class="accordion-item">
-            <button class="accordion-header" aria-expanded="false">
-                <h2>Mission 1 : Technique (WiFi)</h2>
+            <button class="accordion-header" aria-expanded="true">
+                <h2>Mission 1 : Audit et Déploiement WiFi</h2>
                 <span class="accordion-icon">+</span>
             </button>
-            <div class="accordion-content">
+            <div class="accordion-content" style="max-height: none; opacity: 1;">
                 <div class="accordion-content-inner">
-                    
+                    <div class="card" style="background: var(--bg-surface-alt);">
+                        <h3>Tâches réalisées</h3>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h4>Tâche 1 : Audit RF et simulation Ekahau</h4>
+                            <p>Analyse de la propagation des ondes en environnement contraint.</p>
+                            <div class="status-container-box ac-box">
+                                <span class="status-label" style="font-size: 0.75rem;">AC21.01 : Maîtriser les technologies sans fil</span>
+                                <div class="status-indicator">
+                                    <span class="status-dot dot-acquis"></span>
+                                    <span class="status-text text-acquis">Acquis</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 25px;">
+                            <h4>Tâche 2 : Configuration des équipements Aruba</h4>
+                            <p>Paramétrage des SSIDs et segmentation par VLANs.</p>
+                            <div class="status-container-box ac-box">
+                                <span class="status-label" style="font-size: 0.75rem;">AC11.02 : Administrer un réseau LAN</span>
+                                <div class="status-indicator">
+                                    <span class="status-dot dot-acquis"></span>
+                                    <span class="status-text text-acquis">Acquis</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="card">
-                        <h3>Apprentissages Critiques (BUT R&T)</h3>
+                        <h3>🔎 Preuves & Livrables</h3>
                         <div style="margin-bottom: 15px;">
-                            <span class="tag tag-ac">AC1 - Admin Réseau</span>
-                            <span class="tag tag-ac">AC2 - Technologies Sans Fil</span>
-                        </div>
-                        <p>J'ai appris à ne pas faire confiance aveuglément aux plans théoriques. La réalité du terrain (murs porteurs non indiqués) prime toujours sur la simulation.</p>
-                    </div>
-
-                    <h3 style="margin-top: 30px; margin-bottom: 20px;">Preuves & Livrables</h3>
-                    <div class="grid-3">
-                        <div class="card-proof">
-                            <span class="proof-meta">PDF / Excel</span>
-                            <h4>Plan d'Adressage IP</h4>
-                            <p>Découpage des sous-réseaux et affectation des VLANs.</p>
-                            <p style="font-style: italic; font-size: 0.85rem; color: var(--accent);">
-                                &rarr; Démontre la maîtrise du subnetting.
-                            </p>
-                        </div>
-                        <div class="card-proof">
-                            <span class="proof-meta">Capture Ekahau</span>
-                            <h4>Heatmap WiFi</h4>
-                            <p>Simulation de couverture avant/après travaux.</p>
-                            <p style="font-style: italic; font-size: 0.85rem; color: var(--accent);">
-                                &rarr; Prouve l'efficacité du placement des bornes.
-                            </p>
-                        </div>
-                        <div class="card-proof">
-                            <span class="proof-meta">Extrait Code</span>
-                            <h4>Config Switch</h4>
-                            <p>Configuration des ports trunk et access.</p>
-                            <p style="font-style: italic; font-size: 0.85rem; color: var(--accent);">
-                                &rarr; Démontre la compétence CLI Cisco/Aruba.
-                            </p>
+                            <h4>Heatmap WiFi (Ekahau)</h4>
+                            <p>Rapport prédictif montrant les niveaux de couverture (RSSI).</p>
+                            <p style="font-style: italic; color: var(--accent); font-size: 0.85rem;">→ Démontre la maîtrise du dimensionnement RF (AC21.01).</p>
                         </div>
                     </div>
 
-                    <h3 style="margin-top: 30px; color: var(--accent);">Focus : Une erreur, une leçon</h3>
-                    <p><strong>L'erreur :</strong> Puissance d'émission trop forte (MAX) créant du "Stickiness".</p>
-                    <p><strong>La correction :</strong> Ajustement manuel des niveaux Tx (-6dB) pour forcer le roaming.</p>
+                    <div class="card">
+                        <h3>Analyse réflexive</h3>
+                        <p><strong>Apprentissage :</strong> L'ingénierie radio est primordiale pour la stabilité.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -90,66 +193,35 @@
             </button>
             <div class="accordion-content">
                 <div class="accordion-content-inner">
-                    
+                    <div class="card" style="background: var(--bg-surface-alt);">
+                        <h3>Tâches réalisées</h3>
+                        <div style="margin-bottom: 25px;">
+                            <h4>Tâche 1 : Suivi de planning (Gantt)</h4>
+                            <p>Coordination des délais et des techniciens.</p>
+                            <div class="status-container-box ac-box">
+                                <span class="status-label" style="font-size: 0.75rem;">AC31.02 : Planifier un projet</span>
+                                <div class="status-indicator">
+                                    <span class="status-dot dot-acquis"></span>
+                                    <span class="status-text text-acquis">Acquis</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="card">
-                        <h3>Apprentissages Critiques (BUT R&T)</h3>
+                        <h3>🔎 Preuves & Livrables</h3>
                         <div style="margin-bottom: 15px;">
-                            <span class="tag tag-ac">AC3 - Gestion de Projet</span>
-                            <span class="tag tag-ac">AC4 - Communication</span>
-                        </div>
-                        <p>La technique est binaire, la gestion est humaine. Arbitrage constant entre coût, délai et qualité.</p>
-                    </div>
-
-                    <h3 style="margin-top: 30px; margin-bottom: 20px;">Preuves & Livrables</h3>
-                    <div class="grid-3">
-                        <div class="card-proof">
-                            <span class="proof-meta">Capture MS Project</span>
-                            <h4>Planning Gantt</h4>
-                            <p>Visualisation du chemin critique et des tâches.</p>
-                            <p style="font-style: italic; font-size: 0.85rem; color: var(--accent);">
-                                &rarr; Démontre l'anticipation des délais.
-                            </p>
-                        </div>
-                        <div class="card-proof">
-                            <span class="proof-meta">Tableau Excel</span>
-                            <h4>Matrice RACI</h4>
-                            <p>Définition des rôles (Qui fait quoi, qui décide).</p>
-                            <p style="font-style: italic; font-size: 0.85rem; color: var(--accent);">
-                                &rarr; Prouve la capacité à organiser une équipe.
-                            </p>
-                        </div>
-                        <div class="card-proof">
-                            <span class="proof-meta">Document PDF</span>
-                            <h4>Compte-rendu réunion</h4>
-                            <p>PV de réunion de chantier avec arbitrage client.</p>
-                            <p style="font-style: italic; font-size: 0.85rem; color: var(--accent);">
-                                &rarr; Démontre la communication professionnelle.
-                            </p>
+                            <h4>Diagramme de Gantt</h4>
+                            <p>Planning détaillé incluant les jalons de livraison.</p>
+                            <p style="font-style: italic; color: var(--accent); font-size: 0.85rem;">→ Démontre l'aptitude à anticiper les contraintes (AC31.02).</p>
                         </div>
                     </div>
-
-                    <h3 style="margin-top: 30px;">Tableau des imprévus</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Imprévu</th>
-                                <th>Solution</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Retard livraison Switchs</td>
-                                <td>Pré-câblage en amont pour gagner du temps.</td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
         </div>
 
         <footer style="margin-top: 80px; text-align: center; color: var(--text-muted);">
-            <p>Merci de votre lecture.</p>
-            <a href="mailto:ton@email.com" class="btn btn-outline" style="font-size: 0.9rem; margin-top: 10px;">Me contacter</a>
+            <p>Portfolio BUT R&T - Victoria</p>
         </footer>
 
     </main>
