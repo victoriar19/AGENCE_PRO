@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse Réflexive - Victoria</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Ajustement local pour l'analyse */
+        .analysis-section { margin-bottom: 60px; }
+        .competence-detail { margin-top: 20px; padding-left: 20px; border-left: 2px solid var(--border-subtle); }
+        .mission-ref { font-weight: bold; color: var(--accent); font-size: 0.9rem; text-transform: uppercase; }
+    </style>
+</head>
+
+<body>
+
+    <a href="projet.html" class="nav-back" aria-label="Retour Projet">&larr;</a>
+    <button id="theme-toggle" class="theme-toggle-fixed" aria-label="Changer de thème">
+        <span class="icon">☀️</span>
+    </button>
+
+    <main class="container animate-enter">
+
+        <header style="margin-bottom: 40px; text-align: center;">
+            <h1>Analyse Réflexive</h1>
+            <p style="max-width: 700px; margin: 20px auto;">Prendre du recul sur mon activité en entreprise pour valider mes acquis du Semestre 3 et projeter mes objectifs du Semestre 4.</p>
+        </header>
+
+        <section class="analysis-section">
+            <div class="card">
+                <h2>Vision Globale du Projet</h2>
+                <p>Le déploiement WiFi au Haras est le fil rouge de mon alternance. Au **S3**, ma mission s'est concentrée sur l'audit physique, la simulation logicielle et la mise en service du bâtiment principal (le Château). Ce travail de terrain a nécessité une rigueur technique immédiate pour garantir la continuité de service.</p>
+                <p>Pour le **S4**, l'enjeu sera de passer d'une infrastructure isolée à une gestion multisites plus complexe, en intégrant les bâtiments annexes et en renforçant la sécurité globale du domaine.</p>
+            </div>
+        </section>
+
+        <section class="analysis-section">
+            <h2 style="margin-bottom: 30px; text-align: center;">Validation du Référentiel de Compétences</h2>
+
+            <div class="card">
+                <div class="status-container-box">
+                    <span class="status-label">RT1 : Administrer les réseaux et l'Internet</span>
+                    <div class="status-indicator">
+                        <span class="status-dot dot-acquis"></span>
+                        <span class="status-text text-acquis">Acquis</span>
+                    </div>
+                </div>
+                <div class="competence-detail">
+                    <p><span class="mission-ref">Mission liée :</span> Mission 1 (Plan WiFi intérieur)</p>
+                    <p><strong>Actions concrètes :</strong> J'ai configuré les équipements actifs Aruba. Cela a impliqué la création et l'étiquetage des VLANs, ainsi que la configuration des interfaces "Trunk" pour assurer le transport des flux jusqu'aux bornes.</p>
+                    <p><strong>Preuves :</strong> Fichier de configuration Switch et Plan d'adressage IP.</p>
+                    <p><em>Analyse :</em> J'ai consolidé ma maîtrise de la segmentation réseau. L'erreur n'est pas permise en production : un VLAN mal tagué et c'est l'isolement d'un service complet du Haras.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="status-container-box">
+                    <span class="status-label">RT2 : Connecter les entreprises et les usagers</span>
+                    <div class="status-indicator">
+                        <span class="status-dot dot-acquis"></span>
+                        <span class="status-text text-acquis">Acquis</span>
+                    </div>
+                </div>
+                <div class="competence-detail">
+                    <p><span class="mission-ref">Mission liée :</span> Mission 1 (Audit et déploiement)</p>
+                    <p><strong>Actions concrètes :</strong> Réalisation de l'étude de couverture (Audit RF). J'ai dû positionner les bornes pour optimiser le signal dans un bâtiment aux murs épais, limitant la propagation.</p>
+                    <p><strong>Preuves :</strong> Heatmap Ekahau incluse dans le rapport de mission.</p>
+                    <p><em>Analyse :</em> J'ai appris que la théorie du signal diffère de la pratique en bâtiment historique. L'ajustement des puissances d'émission est devenu un automatisme pour éviter les zones d'ombre.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="status-container-box">
+                    <span class="status-label">RT3 / Pilotage : Travailler en équipe et gérer un projet</span>
+                    <div class="status-indicator">
+                        <span class="status-dot dot-acquis"></span>
+                        <span class="status-text text-acquis">Acquis</span>
+                    </div>
+                </div>
+                <div class="competence-detail">
+                    <p><span class="mission-ref">Mission liée :</span> Mission 2 (Gestion de Projet)</p>
+                    <p><strong>Actions concrètes :</strong> Utilisation d'un diagramme de Gantt pour coordonner l'arrivée du matériel et l'intervention des électriciens pour le câblage.</p>
+                    <p><strong>Preuves :</strong> Capture du planning projet et PV de recette signé.</p>
+                    <p><em>Analyse :</em> La technique ne suffit pas. Sans communication claire avec les prestataires, le déploiement prend du retard. J'ai renforcé ma capacité d'anticipation des risques logistiques.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="status-container-box">
+                    <span class="status-label">Cyber : Sécuriser les infrastructures</span>
+                    <div class="status-indicator">
+                        <span class="status-dot dot-encours"></span>
+                        <span class="status-text text-encours">En cours</span>
+                    </div>
+                </div>
+                <div class="competence-detail">
+                    <p><span class="mission-ref">Mission liée :</span> Mission 1 (Configuration)</p>
+                    <p><strong>Actions concrètes :</strong> Mise en œuvre du chiffrement WPA2/WPA3 Enterprise et isolation du trafic "Guest" du trafic "Administration".</p>
+                    <p><strong>Preuves :</strong> Capture d'écran des politiques de sécurité sur le contrôleur WiFi.</p>
+                    <p><em>Analyse :</em> Si l'isolation est fonctionnelle, je dois encore approfondir la partie surveillance (logs) et détection d'intrusions pour valider totalement cette compétence au S4.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer style="margin-top: 80px; text-align: center; color: var(--text-muted);">
+            <p>Analyse Réflexive BUT R&T - Victoria</p>
+        </footer>
+
+    </main>
+
+    <script src="js/theme.js"></script>
+</body>
+</html>
