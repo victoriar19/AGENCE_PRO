@@ -1,45 +1,61 @@
-/* js/theme.js */
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- 1. GESTION DU THÈME ---
+    // 1. THÈME
     const toggleBtn = document.getElementById('theme-toggle');
     const root = document.documentElement;
-    const iconSpan = toggleBtn.querySelector('.icon');
-    const currentTheme = localStorage.getItem('theme') || 'dark';
+    const iconSpan = toggleBtn ? toggleBtn.querySelector('.icon') : null;
 
-    root.setAttribute('data-theme', currentTheme);
-    updateIcon(currentTheme);
-
-    toggleBtn.addEventListener('click', () => {
-        const activeTheme = root.getAttribute('data-theme');
-        const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
-        root.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateIcon(newTheme);
-    });
-
-    function updateIcon(theme) {
-        iconSpan.textContent = theme === 'dark' ? '☀️' : '🌙';
-        toggleBtn.setAttribute('aria-label', theme === 'dark' ? 'Activer mode jour' : 'Activer mode nuit');
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+            const currentTheme = root.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            root.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            if (iconSpan) iconSpan.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+        });
     }
 
-    // --- 2. GESTION ACCORDÉON ---
+    // 2. ACCORDÉON
     const accordions = document.querySelectorAll('.accordion-header');
-
-    accordions.forEach(acc => {
-        acc.addEventListener('click', function() {
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', !isExpanded);
-
-            const content = this.nextElementSibling;
-
+    accordions.forEach(header => {
+        header.addEventListener('click', () => {
+            const isExpanded = header.getAttribute('aria-expanded') === 'true';
+            header.setAttribute('aria-expanded', !isExpanded);
+            const content = header.nextElementSibling;
+            
             if (!isExpanded) {
-                // OUVRIR (Calcul hauteur dynamique)
                 content.style.maxHeight = content.scrollHeight + "px";
+                content.style.opacity = "1";
             } else {
-                // FERMER
                 content.style.maxHeight = null;
+                content.style.opacity = "0";
             }
+        });
+    });
+
+    // 3. CARROUSEL (SWIPE)
+    const carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(carousel => {
+        const track = carousel.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextBtn = carousel.querySelector('.next');
+        const prevBtn = carousel.querySelector('.prev');
+        let index = 0;
+
+        const updateSlide = () => {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        };
+
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Empêche l'accordéon de réagir
+            index = (index + 1) % slides.length;
+            updateSlide();
+        });
+
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            index = (index - 1 + slides.length) % slides.length;
+            updateSlide();
         });
     });
 });

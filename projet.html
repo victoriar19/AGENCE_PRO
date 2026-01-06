@@ -102,9 +102,10 @@
 
         <section style="margin-bottom: 50px;">
             <div class="card">
-                <img src="\assets\chateau.jpg" alt="chateau">
+                <img src="assets/chateau.jpg" alt="chateau"
+                    style="width: 85%; max-width: 900px; display: block; margin: 0 auto; border-radius: 8px;">
                 <p style="margin-top: 15px;">
-                    Ce projet consiste à installer Internet dans l’ensemble du Haras. <br>Le terrain étant totalement
+                    Le projet consiste à installer Internet dans l’ensemble du Haras. <br>Le terrain étant totalement
                     vierge nous avons du réfléchir à l'installation des éléments nécessaires du début à la fin.
                     <br>Ce projet va se dérouler tout au
                     long
@@ -134,10 +135,11 @@
 
 
                             <h4>Tâche 1 : Collecte de données </h4>
-                            <p>L’objectif de cette mission était de faire de la collecte/analyse des besoins des autres
-                                lots et de la gestion des différents acteurs de l’installation Internet. <br> Pour cela,
+                            <p>L’objectif de cette mission était de faire de une collecte et une analyse des besoins des
+                                autres
+                                lots. <br> Pour cela,
                                 nous avons contacter les différents acteurs intervenant dans le Haras et nous
-                                leurs avons fourni un document de prérequis réseaux. <br> L'objectif du document est
+                                leurs avons fourni un document de prérequis réseaux. <br> L'objectif de ce document est
                                 d'évaluer les besoins réseaux des différents lots
                                 techniques. </p>
 
@@ -160,7 +162,8 @@
 
                             <h4>Tâche 2 : Plan IP </h4>
                             <p>L'élaboration du plan IP est très important dans un projet, ce sont les fondations de la
-                                pyramide : sans cela rien ne tiens. <br> C'est pourquoi, nous avons prévu un plan IP large pour mettre une évolutivité. </p>
+                                pyramide : sans cela rien ne tiens. <br> C'est pourquoi, nous avons prévu un plan IP
+                                large pour mettre une évolutivité. </p>
 
                             <div style="margin-bottom: 15px;">
                                 <h3>Preuves/Livrables :</h3>
@@ -186,9 +189,15 @@
                                 fibre
                                 dans le fourreaux PTT (FTTO). <br> Afin de leurs faire gagner du temps, nous les
                                 avons guidés.
-                                <img src="\assets\chambre.jpg" alt="fibre">
-                                <img src="\assets\chambre_2.jpg" alt="fibre">
-                                <img src="\assets\chambre_3.jpg" alt="fibre">
+                            <div class="carousel">
+                                <div class="carousel-track">
+                                    <img src="assets/chambre.jpg" alt="fibre 1">
+                                    <img src="assets/chambre_2.jpg" alt="fibre 2">
+                                    <img src="assets/chambre_3.jpg" alt="fibre 3">
+                                </div>
+                                <button class="carousel-btn prev" aria-label="Précédent">❮</button>
+                                <button class="carousel-btn next" aria-label="Suivant">❯</button>
+                            </div>
                             </p>
                             <div class="status-container-box ac-box">
                                 <span class="status-label" style="font-size: 0.75rem;">AC21.06 : Travailler en équipe
@@ -210,16 +219,20 @@
                             avec les électriciens car c'était eux qui étaient responsables de tirer les câbles
                             ethernet entre la baie et l'emplacement prédéfinis des bornes.</p>
 
-
                         <div class="card">
                             <h3>Preuves & Livrables</h3>
-                            <div style="margin-bottom: 15px;">
-                                <img src="\assets\mur.jpg" alt="mur">
-                                <img src="\assets\meuble.jpg" alt="meuble">
-                                <img src="\assets\meuble_2.jpg" alt="meuble">
-                                <p style="font-style: italic; color: var(--accent); font-size: 0.85rem;">→ Démontre
-                                    l'aptitude à anticiper les contraintes (AC31.02).</p>
+                            <div class="carousel">
+                                <div class="carousel-track">
+                                    <img src="assets/mur.jpg" alt="mur">
+                                    <img src="assets/meuble.jpg" alt="meuble">
+                                    <img src="assets/meuble_2.jpg" alt="meuble">
+                                </div>
+                                <button class="carousel-btn prev" aria-label="Précédent">❮</button>
+                                <button class="carousel-btn next" aria-label="Suivant">❯</button>
                             </div>
+                            <p style="font-style: italic; color: var(--accent); font-size: 0.85rem; margin-top: 10px;">
+                                → Démontre l'aptitude à anticiper les contraintes (AC31.02).
+                            </p>
                         </div>
 
                         <div class="status-container-box ac-box">
@@ -256,6 +269,14 @@
                         <div style="margin-bottom: 25px;">
                             <h4>Tâche 1 : Faire des plans Wifi </h4>
                             <p>Analyse de la propagation des ondes en environnement contraint.</p>
+
+                            <div style="margin-bottom: 15px;">
+                                <h3>Preuves/Livrables :</h3>
+                                <a href="\assets\plan_wifi.png"><img src="\assets\plan_wifi.png" alt="doc"></a>
+                                <p style="font-style: italic; color: var(--accent); font-size: 0.85rem;">→ Démontre
+                                    l'aptitude à anticiper les contraintes (AC31.02).</p>
+                            </div>
+
                             <div class="status-container-box ac-box">
                                 <span class="status-label" style="font-size: 0.75rem;">AC21.01 : Maîtriser les
                                     technologies sans fil</span>
@@ -340,8 +361,6 @@
 
         <div class="card" style="border-left: 5px solid var(--accent); background: var(--bg-surface-alt);">
             <h3>Analyse des compétences mobilisées</h3>
-            <p>Ce projet au Haras m'a permis de valider plusieurs compétences clés du référentiel R&T (RT1, RT2,
-                RT3 et Cyber). </p>
             <a href="analyse.html" class="btn btn-outline" style="margin-top: 15px;">Accéder à l'analyse
                 réflexive globale &rarr;</a>
         </div>
